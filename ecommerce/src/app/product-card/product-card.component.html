@@ -1,0 +1,17 @@
+<div class = "card-container">
+    <div class = "product-card" *ngFor = "let product of products; let i = index"> 
+        <!-- product is the item that we're gonna use for each product and products is the array of products in productCardComp.ts-->
+        <!-- the products array creation and pushing of created products occur in the AppComp.ts file and the products array is then sent to the producCardComp.ts-->
+         
+        <div class="card-content">
+            <p class="product-details">Name : {{product.name}}</p>
+            <p class="product-details">Price : {{product.price | number}} rs</p>
+            <p class="product-details ">Quantity : {{product.quantity}}</p>
+
+            <div class = "btn-grp">
+                <button class = "edit-btn" (click) = "openEditDialog(i)">Edit</button>
+                <button class = "delete-btn" (click) = "deleteProduct(product._id,i)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

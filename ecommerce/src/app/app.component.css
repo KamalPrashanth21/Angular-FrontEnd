@@ -13,6 +13,7 @@ header{
     height: 100vh;
 }
 .left-panel{
+    flex: 1;
     padding: 20px;
     width: 30%;
     margin-top: 30px;
@@ -21,11 +22,21 @@ header{
 form{
     display:flex;
     gap : 10px;
+    font-size: medium;
     flex-direction: column;
+    padding: 40px;
+    border: 2px solid white; 
+    border-radius: 20px; 
+    box-shadow: 5px 5px 5px 5px gray; 
+    background-color: white;
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
+
 input{
     padding: 10px;
     font-size: 16px;
+    margin-bottom: 25px;
 }
 .btn-primary{
     padding: 10px;
@@ -33,4 +44,14 @@ input{
     font-size: 16px;
     margin-top: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: white;
+}
+.right-panel{
+    flex: 2;
+    padding: 20px;
+    margin-top: 30px;
+    padding-left: 10px;
 }
