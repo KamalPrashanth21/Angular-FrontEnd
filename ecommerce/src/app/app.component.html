@@ -1,7 +1,14 @@
 <div class = "container">
-  <header>
-    <h1>E-Commerce Applicn</h1>
-  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">E-COMMERCE APP</h1>
+      <div class="nav-links">
+        <a href="#" class="nav-link">HOME</a>
+        <a href="#" class="nav-link">ABOUT</a>
+        <a href="#" class="nav-link">MANAGE PRODUCTS</a>
+      </div>
+    </div>
+  </nav>   
   <div class = "content">
     <div class = "left-panel">
       <form (submit)="addProduct(); form.reset(); $event.preventDefault()" #form>
