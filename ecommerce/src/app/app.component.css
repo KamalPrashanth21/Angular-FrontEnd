@@ -55,3 +55,54 @@ input{
     margin-top: 30px;
     padding-left: 10px;
 }
+
+/* for navbar */
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff; /* Bootstrap Primary Color */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  /* Container for navbar items */
+  .nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10%;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 5%;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    transition: background 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  
