@@ -26,6 +26,7 @@
       
     </div>
     <div class = "right-panel">
+      <input type="text" [(ngModel)]="searchQuery" class="search-box" placeholder="Search by Name.." (input)="filterProducts()">
       <app-productCard [products] = "products"></app-productCard>
     </div>
   </div>
