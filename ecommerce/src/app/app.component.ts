@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
       quantity: null
      };
     products: any[] = []; 
+    filteredProducts : any[] = [];
 
     isFormValid() : boolean{
       return !!this.product.name && !!this.product.price && !!this.product.quantity;
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit{
     ngOnInit() {
       this.productService.getProducts().subscribe(data => {
         this.products = data;
+        this.filteredProducts = [...this.products];
       });
     }
    
@@ -48,6 +50,17 @@ export class AppComponent implements OnInit{
       this.products.push(response);
     });
   }
+    searchQuery : String = '';
+    filterProducts(){
+      if(!this.searchQuery.trim()){
+        this.products =this.filteredProducts;
+      }
+      else{
+        this.products = this.products.filter(product => 
+          product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+        );
+      }
+    }
     /*
       const newProduct = {
         name : this.name,
